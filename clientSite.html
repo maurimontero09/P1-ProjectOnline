@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/indexStyles.css">
+    <title>Paquetes - VIAJAUY</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="../img/logoChico.png" alt="Logo de VIAJAUY"></a>
+        <nav>
+            <a href="clientData.html">Informacion personal</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="historialReservas.html">Reservas</a>
+            <a href="index.html" id="log-out">Cerrar sesion</a>
+        </nav>
+    </header>
+
+    <section id="paquetes">
+        <div class="contenedor">
+                <h2>PAQUETES POPULARES</h2>
+                <p>Precios en base doble</p>
+                <div id="articlesPaquetes">
+                </div>
+        </div>
+    </section>
+
+    <dialog id="modal">
+        <h2>Estas a un paso de realizar tu reserva...</h2>
+        <p id="emptyForm"></p>
+
+        <form id="form" >
+            <label for="inputCantPasajeros">Cantidad de pasajeros</label>
+            <input type="number" id="inputCantPasajeros" placeholder="4">
+
+            <label for="inputMedioPago">Medio de pago</label>
+            <select id="inputMedioPago">
+                <option value="efectivo">Efectivo</option>
+                <option value="millas">Millas</option>
+            </select>
+            <input type="submit" id="send" value="REALIZAR RESERVA">
+        </form>
+    </dialog>
+
+
+    <script src="../entities/events.js"></script>
+    <script src="../entities/Users.js"></script>
+    <script src="../entities/sistema.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>

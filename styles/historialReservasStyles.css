@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 119px;
+}
+
+.contenedor {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px 0px;
+    color: black;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+a, p, li, label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    background-color: #023047;
+    padding: 30px 8px 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    border-bottom: 4px solid #fb8500;
+}
+
+header a img {
+    width: 200px;
+    height: 70px;
+    padding-left: 50px;
+}
+
+header nav a {
+    padding-right: 60px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header a:hover {
+    color: #fb8500;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 160px; /* Ajustar para el header fijo */
+}
+
+.container-background-1, .container-background-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    flex-basis: 46%;
+}
+
+.reservas {
+    text-align: center;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #fb8500;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+    font-size: 35px;
+    width: 100%; /* En pantallas pequeñas, el h2 debe tomar toda la fila */
+    text-align: center;
+}
+
+.estadoReserva-aprobada, .estadoReserva-rechazada, .estadoReserva-pendiente, .estadoReserva-cancelada {
+    background-color: #04AA6D;
+    width: 100%; /* Ajusta el tamaño para que ocupe toda la fila en pantallas pequeñas */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cancelarReserva {
+    width: 100%;
+    text-align: center;
+    padding: 15px 30px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #fb8500, #ff7c00);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 4px 3px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.cancelarReserva:hover {
+    background: linear-gradient(135deg, #ff7c00, #ff6100);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cancelarReserva:active {
+    transform: translateY(1px);
+}
+
+/* MEDIA QUERY: Pantallas más pequeñas como tablets o móviles */
+@media screen and (max-width: 768px) {
+    .container-background-1, .container-background-2 {
+        flex-basis: 100%; /* En pantallas más pequeñas, cada contenedor ocupará toda la fila */
+    }
+
+    .reservas {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 28px; /* Reducir el tamaño de los títulos */
+    }
+
+    .estadoReserva-aprobada, .estadoReserva-rechazada, .estadoReserva-pendiente, .estadoReserva-cancelada {
+        width: 80%; /* Hacer que los botones se adapten mejor */
+        font-size: 14px; /* Reducir el tamaño de fuente */
+        padding: 12px;
+    }
+
+    .cancelarReserva {
+        width: 80%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}

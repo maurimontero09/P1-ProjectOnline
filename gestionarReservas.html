@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/adminStyles.css" />
+  <link rel="stylesheet" href="../styles/gestionarReservasStyles.css" />
+  <title>Gestion Reservas - ADMIN</title>
+</head>
+
+<body>
+  <header>
+    <a href="admin.html"><img src="../img/logoChico.png" alt="Logo de VIAJAUY" /></a>
+    <nav>
+      <a href="#">Gestionar reservas</a>
+      <a href="gestionarDestinos.html">Gestionar destinos</a>
+      <a href="informeGanancias.html">Informe de ganancias</a>
+      <a href="index.html">Vista cliente</a>
+    </nav>
+  </header>
+
+  <section id="gestionReservas-section">
+    <div class="contenedor">
+      <h1><u>Gestion de reservas</u></h1>
+      <h2 id="emptyReserv"></h2>
+      <table id="tablaDestinos">
+        <thead>
+          <!--Definicion de Headers...-->
+          <tr>
+            <th>Destino</th>
+            <th>Precio</th>
+            <th>Estado de reserva</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyReservas">
+        </tbody>
+      </table>
+  </section>
+  <script src="../entities/events.js"></script>
+    <script src="../entities/Users.js"></script>
+    <script src="../entities/sistema.js"></script>
+  <script src="../gestionReserv.js"></script>
+</body>
+
+</html>

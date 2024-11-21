@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/loginStyles.css" />
+    <title>Login - VIAJAUY</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="#"><img src="../img/logoChico.png" alt="Logo de VIAJAUY" /></a>
+      <nav>
+      </nav>
+    </header>
+    
+
+    <section id="loginContainer" class="contenedor">
+        <div id="login-img" class="toggle-panel move-right move-left">
+        </div>    
+      <div id="login-data" class="login-registro-container">
+
+        <h1>Iniciar sesión</h1>
+
+        <form>
+          <div class="form-content">
+            <label for="inputUserName">Nombre de usuario o email</label>
+            <input type="text" id="inputUserName" placeholder="username" />
+
+            <label for="inputPassword">Contraseña</label>
+            <input type="password" id="inputPassword" placeholder="password" />
+          </div>
+          <div id="errorContainerLogin">
+
+          </div>
+        </form>
+
+        <input type="button" value="¿No tienes una cuenta? Registrate aquí" class="toggle-left" id="register-slider"/>
+
+        <div class="button-form">
+          <input id="sendLogin" type="button" class="buttonLogin" value="Iniciar Sesión" />
+        </div>
+      </div> 
+      <div id="registro-data" class="login-registro-container">
+        <h1>Registrate</h1>
+
+        <form>
+          <div class="form-content">
+            <label for="inputName">Nombre</label>
+            <input type="text" id="inputSignUpName" placeholder="Nombre" class="redBorder" />
+            <label for="inputLastName">Apellido</label>
+            <input type="text" id="inputSignUpLastName" placeholder="Apellido" class="redBorder" />
+            <label for="inputUsername">Nombre de usuario</label>
+            <input type="email" id="inputSignUpUsername" placeholder="username" class="redBorder" />
+            <label for="inputPasswordRegister">Contraseña</label>
+            <input type="password" id="inputSignUpPassword" placeholder="password" class="redBorder" />
+            <label for="inputCreditCard">Numero de tarjeta de credito</label>
+            <input type="text" id="inputSignUpCreditCard" placeholder="WWWW-XXXX-YYYY-ZZZZ" class="redBorder" />
+            <label for="inputCVC">Numero de tarjeta de credito</label>
+            <input type="text" id="inputSignUpCVC" placeholder="CVC" class="redBorder" maxlength="3"/>
+            <div id="errorContainerRegister">
+
+            </div>
+          </div>
+        </form>
+
+        <input type="button" value="¿Tienes cuenta? Inicia sesion aquí" class="toggle-right" id="login-slider"/>
+
+        <div class="button-form">
+          <input type="button" class="buttonLogin" value="Registrarse" id="sendRegitration"/>
+        </div>
+      </div>
+    </section>
+    <script  type="text/javascript" src="../login.js"></script>
+
+    <script type="text/javascript" src="../entities/Users.js"></script>
+    <script type="text/javascript" src="../entities/events.js"></script>
+    <script type="text/javascript" src="../entities/sistema.js"></script>
+    <script type="text/javascript" src="../utils/helpers.js"></script>
+  </body>
+</html>

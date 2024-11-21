@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 119px;
+}
+
+.contenedor {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+th,
+h2,
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+td,
+a,
+p,
+li,
+label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    background-color: #023047;
+    padding: 30px 8px 15px 60px;
+    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    border-bottom: 4px solid #219ebc;
+}
+
+header a img {
+    width: 200px;
+    height: 70px;
+    padding-left: 50px;
+}
+
+header nav a {
+    padding-right: 60px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header a:hover {
+    color: #219ebc;
+}
+
+header a:focus {
+    color: #219ebc;
+}
+
+/* Tabla de destinos */
+
+ #gestDestinos {
+    height: auto;
+    /* background-image: url("img/aeropuerto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    margin: 10px;
+}
+
+#gestDestinos div {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+#gestDestinos div h1 {
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-weight: 700;
+    color: #023047;
+}
+
+u {
+    text-decoration-color: #fa8600;
+}
+
+#gestDestinos .contenedor table {
+    margin: 0 auto;
+    padding-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow:
+        0 4px 5px rgba(0, 0, 0, 0.5),
+        /* Sombra hacia abajo */
+        0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+thead {
+    background-color: #023047;
+    color: white;
+}
+
+th,
+td {
+    padding: 20px;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fa8600;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fcb769;
+    cursor: pointer;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    border-bottom: 2px solid #023047;
+}
+
+/* Boton nuevo destino */
+.fixed-button {
+    position: fixed;
+    bottom: 10px; 
+    right: 20px;
+    background-color: #023047;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-button:hover {
+    background-color: #02496d;
+}
+
+
+/* Modal modificar destinos */
+body::before {
+    content: "";
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Estilos generales del modal */
+dialog {
+    overflow: hidden;
+    flex-direction: column;
+    width: 60%;
+    max-width: 800px;
+    overflow-y: auto;
+    max-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+dialog[open] {
+    display: flex;
+    overflow-y: auto;
+}
+
+dialog h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    padding: 15px;
+}
+
+/* Estilos del formulario dentro del modal */
+dialog form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+}
+
+#third-column,
+#second-column,
+#first-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+form label {
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+form input, form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease;
+}
+
+form input:focus, form select:focus {
+    outline: none;
+    border-color: #fb8500;
+    box-shadow: 0 0 5px rgba(251, 133, 0, 0.5);
+}
+
+/* Estilos del botón de envío */
+#sendButton {
+    width: 70%
+}
+#send {
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #fb8500, #ff7c00);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 4px 3px rgba(0, 0, 0, 0.3);
+    outline: none;
+    width: 100%;
+}
+
+#send:hover {
+    background: linear-gradient(135deg, #ff7c00, #ff6100);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#send:active {
+    transform: translateY(1px);
+}
